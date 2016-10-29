@@ -122,8 +122,7 @@
 
 
   <target name="phpunit" description="Run unit tests with PHPUnit">
-    <exec executable="php">
-      <arg value="phpunit.phar" />
+    <exec executable="phpunit">
       <arg value="-c" />
       <arg path="app/phpunit.xml.dist" />
     </exec>
