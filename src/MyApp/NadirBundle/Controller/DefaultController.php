@@ -24,7 +24,6 @@ class DefaultController extends Controller
             ->attach(\Swift_Attachment::fromPath('report.dat'))
             ->setCharset('UTF-8');
     
-
     $mailer->send($message);
     
     return $this->render('MyAppNadirBundle:Default:index.html.twig');
