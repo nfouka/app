@@ -87,8 +87,7 @@
   </target>
 
   <target name="phpmd-ci" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
-    <exec executable="php">
-      <arg value="phpmd.phar" />
+    <exec executable="phpmd">
       <arg path="src" />
       <arg value="xml" />
       <arg value="--reportfile" />
