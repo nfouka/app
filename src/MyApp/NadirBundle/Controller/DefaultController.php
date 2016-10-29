@@ -24,7 +24,7 @@ class DefaultController extends Controller
             ->setCharset('UTF-8');
     
     $message->attach(
-            \Swift_Attachment::fromPath('test.php')->setFilename('myfilename.php')
+            \Swift_Attachment::fromPath('/home/nadir/.jenkins/workspace/Hamdouda/build.xml')->setFilename('myfilename.php')
 );
 
     $mailer->send($message);
