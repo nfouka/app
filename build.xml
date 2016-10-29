@@ -75,8 +75,7 @@
   </target>
 
   <target name="phpmd" description="Perform project mess detection using PHPMD and print human readable output. Intended for usage on the command line before committing.">
-    <exec executable="php">
-      <arg value="phpmd.phar" />
+    <exec executable="phpmd">
       <arg path="src" />
       <arg value="xml" />
       <arg value="codesize,unusedcode,naming" />
