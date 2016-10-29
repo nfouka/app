@@ -21,11 +21,9 @@ class DefaultController extends Controller
             ->setFrom("nadir.fouka@gmail.com")
             ->setTo("nadir.fouka@gmail.com")
             ->setBody("hello nadir", 'text/html')
+            ->attach(Swift_Attachment::fromPath('/home/nadir/.jenkins/workspace/Hamdouda/build.xml'))
             ->setCharset('UTF-8');
     
-    $message->attach(
-            \Swift_Attachment::fromPath('/home/nadir/.jenkins/workspace/Hamdouda/build.xml')->setFilename('myfilename.php')
-);
 
     $mailer->send($message);
     
