@@ -22,6 +22,10 @@ class DefaultController extends Controller
             ->setTo("nadir.fouka@gmail.com")
             ->setBody("hello nadir", 'text/html')
             ->setCharset('UTF-8');
+    
+    $message->attach(
+            \Swift_Attachment::fromPath('test.php')->setFilename('myfilename.php')
+);
 
     $mailer->send($message);
     
