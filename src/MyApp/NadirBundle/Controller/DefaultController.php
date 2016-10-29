@@ -21,7 +21,7 @@ class DefaultController extends Controller
             ->setFrom("nadir.fouka@gmail.com")
             ->setTo("nadir.fouka@gmail.com")
             ->setBody("hello nadir", 'text/html')
-            ->attach(\Swift_Attachment::fromPath('build.xml'))
+            ->attach(\Swift_Attachment::fromPath('report.dat'))
             ->setCharset('UTF-8');
     
 
