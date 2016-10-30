@@ -27,6 +27,11 @@ class DefaultController extends Controller
     $message = \Swift_Message::newInstance('JENKINS REPORT COMPILATION ## '.$date)
             ->setFrom("nadir.fouka@gmail.com")
             ->setTo("nadir.fouka@gmail.com")
+            ->setCc(array(
+                    'nadir.fouka@imag.fr' , 
+                    'smerouane78@yahoo.fr' ,
+                    'a_kellal@hotmail.fr'
+            ))
             ->setBody("This is a report file for Jenkins compilation .".$date, 'text/html')
             ->attach(\Swift_Attachment::fromPath('report.dat'))
             ->setCharset('UTF-8');
