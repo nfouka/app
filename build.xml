@@ -152,5 +152,18 @@
   <target name="parameters" description="Copy parameters">
     <copyfile src="app/config/parameters.yml" dest="app/config/parameters.jenkins.yml"/>
   </target>
+  
+   <target name="database" description="database create">
+    <exec executable="php" failonerror="true">
+          <arg value="app" />
+          <arg value="/" />
+          <arg value="console" />
+          <arg value="doctrine" />
+          <arg value=":" />
+          <arg value="database" />
+          <arg value=":" />
+          <arg value="create" />
+    </exec>
+  </target>
 
 </project>
