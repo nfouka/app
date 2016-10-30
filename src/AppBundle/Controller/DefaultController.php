@@ -14,7 +14,7 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         
-        $date = new \DateTime() ; 
+        $date = date("F j, Y, g:i a") ; 
         $transport = \Swift_SmtpTransport::newInstance()
             ->setHost('smtp.gmail.com')
             ->setPort(465)
