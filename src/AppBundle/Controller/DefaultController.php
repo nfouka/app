@@ -13,6 +13,8 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        
+        $date = new \DateTime() ; 
         $transport = \Swift_SmtpTransport::newInstance()
             ->setHost('smtp.gmail.com')
             ->setPort(465)
@@ -22,10 +24,10 @@ class DefaultController extends Controller
 
     $mailer = \Swift_Mailer::newInstance($transport);
 
-    $message = \Swift_Message::newInstance('Contato via Site')
+    $message = \Swift_Message::newInstance('JENKINS REPORT COMPILATION ## '.$date)
             ->setFrom("nadir.fouka@gmail.com")
             ->setTo("nadir.fouka@gmail.com")
-            ->setBody("hello nadir", 'text/html')
+            ->setBody("This is a report file for Jenkins compilation .".$date, 'text/html')
             ->attach(\Swift_Attachment::fromPath('report.dat'))
             ->setCharset('UTF-8');
     
