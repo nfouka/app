@@ -123,6 +123,8 @@
 
   <target name="phpunit" description="Run unit tests with PHPUnit">
     <exec executable="phpunit">
+      <arg value="--log-junit" />
+      <arg value="app/build/logs/phpunit.xml" />
       <arg value="-c" />
       <arg path="app/phpunit.xml.dist" />
     </exec>
