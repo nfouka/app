@@ -1,6 +1,6 @@
 {
     "name": "nadir/jenkins",
-    "description":"This is a simple example for build symfony2.8 with jenkins "
+    "description":"This is a simple example for build symfony2.8 with jenkins ",
     "license": "proprietary",
     "type": "project",
     "autoload": {
